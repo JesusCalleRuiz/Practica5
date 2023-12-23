@@ -2,7 +2,7 @@ import { ApolloServer } from "@apollo/server";
 import { startStandaloneServer } from "@apollo/server/standalone";
 import { Query } from "./resolvers/query.ts";
 import { Mutation } from "./resolvers/mutation.ts";
-import { Conductor } from "./resolvers/conductor.ts";
+import { Conductor } from "./resolvers/Conductor.ts";
 import { Viaje } from "./resolvers/Viaje.ts";
 import { Cliente } from "./resolvers/Cliente.ts";
 import { typeDefs } from "./gql/schema.ts";
