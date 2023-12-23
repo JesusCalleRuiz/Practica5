@@ -8,7 +8,7 @@ import { Cliente } from "./resolvers/Cliente.ts";
 import { typeDefs } from "./gql/schema.ts";
 import montoose from "mongoose";
 
-const MONGO_URL = "mongodb+srv://jesuscalleruiz:bXtR3dANxBRhh5Fk@cluster0.qeuki4l.mongodb.net/P5DB?retryWrites=true&w=majority"
+const MONGO_URL = Deno.env.get("MONGO_URL");
 if (!MONGO_URL) {
   throw new Error("Please provide a MongoDB connection string");
 }
