@@ -9,10 +9,10 @@ export const typeDefs = `#graphql
 
   type Tarjetas {
     id: ID!
-    number: Number!
-    cvv: Number!
+    number: Int!
+    cvv: Int!
     expirity: String!
-    money: Number!
+    money: Float!
   }
 
   type Conductor {
@@ -27,9 +27,9 @@ export const typeDefs = `#graphql
     id: ID!
     client: String
     driver: String
-    distance: Number!
+    distance: Float!
     date: String!
-    money: Number!
+    money: Float!
     status: String
   }
 
@@ -43,8 +43,8 @@ export const typeDefs = `#graphql
     deleteClient(id: ID!): Cliente!
     addDriver(name: String!, email: String!, username: String!): Conductor!
     deleteDriver(id: ID!): Conductor!
-    addCard(number: Number!,expirity:String!,money:Number!,cvv:Number!): Cliente!
-    addViaje(clientId:ID!,driverId:ID!,money:Number!,distance:Number!,date:String!) : Viaje!
+    addCard(number: Int!,expirity:String!,money:Float!,cvv:Int!): Cliente!
+    addViaje(clientId:ID!,driverId:ID!,money:Float!,distance:Float!,date:String!) : Viaje!
     endViaje(id:ID!): Viaje!
   }
 `;
